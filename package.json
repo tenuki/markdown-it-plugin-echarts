@@ -1,0 +1,51 @@
+{
+  "name": "markdown-it-plugin-echarts",
+  "version": "0.0.1",
+  "description": "Include chart data in markdown files to be render with echarts library.",
+  "main": "dist/markdown-it-plugin-echarts.js",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "build": "npm run clean && npm run build:src",
+    "build:esm": "tsc -m es6 --target ES2018 --outDir dist-esm",
+    "build:src": "tsc",
+    "docs:build": "node ./node_modules/typedoc/bin/typedoc",
+    "test": "mocha -r ts-node/register --full-trace --bail --require source-map-support/register ./test/**/*.spec.ts",
+    "coverage": "nyc mocha -r ts-node/register --full-trace --bail --require source-map-support/register ./test/**/*.spec.ts",
+    "report": "nyc report",
+    "clean": "rimraf \"dist/*\" && rimraf \"dist-esm/*\""
+  },
+  "keywords": [
+    "markdown-it-plugin",
+    "markdown-it",
+    "echarts",
+    "chart",
+    "graphic",
+    "data"
+  ],
+  "repository": "https://github.com/tenuki/markdown-it-plugin-echarts",
+  "author": {
+    "name": "david weil",
+    "email": "tenuki@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.14.16",
+    "markdown-it": "^12.0.4"
+  },
+  "dependencies": {
+    "@types/chai": "^4.2.14",
+    "@types/markdown-it": "^12.0.0",
+    "@types/mocha": "^8.2.0",
+    "@types/punycode": "^2.1.0",
+    "canvas": "^2.6.1",
+    "chai": "^4.2.0",
+    "echarts": "^5.0.0",
+    "js-yaml": "^3.14.1",
+    "jsdom": "^16.4.0",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
