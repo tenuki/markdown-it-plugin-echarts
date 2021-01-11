@@ -15,11 +15,12 @@
     "clean": "rimraf \"dist/*\" && rimraf \"dist-esm/*\""
   },
   "keywords": [
-    "markdown-it-plugin",
-    "markdown-it",
+    "markdown",
     "echarts",
     "chart",
     "graphic",
+    "markdown-it-plugin",
+    "markdown-it",
     "data"
   ],
   "repository": "https://github.com/tenuki/markdown-it-plugin-echarts",
